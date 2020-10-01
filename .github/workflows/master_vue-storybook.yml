@@ -23,7 +23,7 @@ jobs:
     - name: npm install, build, and test
       run: |
         npm install
-        npm run build
+        npm run build-storybook
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
@@ -31,4 +31,4 @@ jobs:
         app-name: 'vue-storybook'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_d7f3f37138ae4fa29d2ad5e7d81db18c }}
-        package: ./dist
+        package: ./storybook-static
