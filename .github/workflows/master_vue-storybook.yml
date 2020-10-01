@@ -31,4 +31,4 @@ jobs:
         app-name: 'vue-storybook'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_d7f3f37138ae4fa29d2ad5e7d81db18c }}
-        package: .
+        package: ./dist
